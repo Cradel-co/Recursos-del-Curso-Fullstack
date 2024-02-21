@@ -4,8 +4,16 @@ function deObjetoAarray(objeto) {
   // Recibes un objeto. Tendrás que crear un arreglo de arreglos.
   // Cada elemento del arreglo padre será un nuevo arreglo que contendrá dos elementos.
   // Estos elementos debe ser cada par clave:valor del objeto recibido.
-  // [EJEMPLO]: {D: 1, B: 2, C: 3} ---> [['D', 1], ['B', 2], ['C', 3]].
+  // [EJEMPLO]: {D:1, B: 2, C: 3} ---> [['D', 1], ['B', 2], ['C', 3]].
   // Tu código:
+  let arregloPadre = [];
+  let keys= Object.keys(objeto); console.log(Object.keys(objeto));
+  let values = Object.values(objeto); console.log(Object.values(objeto));
+  for(let i = 0 ; i  < keys.length ; i ++){
+    let sub= [keys[i] , values[i]]
+    arregloPadre.push(sub)
+  }
+  return arregloPadre;
 }
 
 function numberOfCharacters(string) {
@@ -14,6 +22,8 @@ function numberOfCharacters(string) {
   // Las letras deben estar en orden alfabético.
   // [EJEMPLO]: "adsjfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
   // Tu código:
+
+  
 }
 
 function capToFront(string) {

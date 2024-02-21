@@ -1,25 +1,36 @@
 const buscarElemento = require("../ejercicios/08");
 
-// Test case 1: Element found
-const array1 = [1, 2, 3, 4, 5];
-const callback1 = (element) => element === 3;
-console.log(buscarElemento(array1, callback1)); // Expected output: 3
 
-// Test case 2: Element not found
-const array2 = [1, 2, 3, 4, 5];
-const callback2 = (element) => element === 6;
-console.log(buscarElemento(array2, callback2)); // Expected output: "No se encontró el elemento"
+describe('buscarElemento function', () => {
+  // Test case 1: Element found
+  test('should return the element when it is found', () => {
+    const array = [1, 2, 3, 4, 5];
+    const callback = (element) => element === 3;
+    expect(buscarElemento(array, callback)).toBe(3);
+  });
 
-// Test case 3: Empty array
-const array3 = [];
-const callback3 = (element) => element === 1;
-console.log(buscarElemento(array3, callback3)); // Expected output: "No se encontró el elemento"
+  // Test case 2: Element not found
+  test('should return "No se encontró el elemento" when the element is not found', () => {
+    const array = [1, 2, 3, 4, 5];
+    const callback = (element) => element === 6;
+    expect(buscarElemento(array, callback)).toBe("No se encontró el elemento");
+  });
 
-// Test case 4: Array of objects
-const array4 = [
-  { name: "John", age: 25 },
-  { name: "Jane", age: 30 },
-  { name: "Bob", age: 40 },
-];
-const callback4 = (element) => element.age === 30;
-console.log(buscarElemento(array4, callback4)); // Expected output: { name: "Jane", age: 30 }
+  // Test case 3: Empty array
+  test('should return "No se encontró el elemento" when the array is empty', () => {
+    const array = [];
+    const callback = (element) => element === 1;
+    expect(buscarElemento(array, callback)).toBe("No se encontró el elemento");
+  });
+
+  // Test case 4: Array of objects
+  test('should return the object when it is found in the array of objects', () => {
+    const array = [
+      { name: "John", age: 25 },
+      { name: "Jane", age: 30 },
+      { name: "Bob", age: 40 },
+    ];
+    const callback = (element) => element.age === 30;
+    expect(buscarElemento(array, callback)).toEqual({ name: "Jane", age: 30 });
+  });
+});

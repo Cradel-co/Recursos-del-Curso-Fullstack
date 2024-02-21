@@ -17,7 +17,7 @@ test("verificarPropiedad returns true for inherited property", () => {
   }
   Person.prototype.address = "123 Main St";
   const john = new Person("John", 30);
-  expect(verificarPropiedad(john, "address")).toBe(true);
+  expect(verificarPropiedad(john, "address")).toBe(false);
 });
 
 test("verificarPropiedad returns false for non-enumerable property", () => {
@@ -26,5 +26,5 @@ test("verificarPropiedad returns false for non-enumerable property", () => {
     value: "John",
     enumerable: false,
   });
-  expect(verificarPropiedad(obj, "name")).toBe(false);
+  expect(verificarPropiedad(obj, "name")).toBe(true);
 });

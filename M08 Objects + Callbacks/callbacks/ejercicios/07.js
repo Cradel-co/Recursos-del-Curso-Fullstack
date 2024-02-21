@@ -1,7 +1,13 @@
 function filter(arrayOfStrings) {
-  // Debes identificar todos los elementos el arreglo que comiencen con la letra "a".
-  // Luego retorna un nuevo arreglo con estos elementos.
-  // Tu código:
+  var newArreglo = [];
+  for (let i = 0; i < arrayOfStrings.length ; i++) {
+    let stringActual = arrayOfStrings[i];
+    let string = arrayOfStrings[i].split("")
+    if (stringActual.includes("a") && string[0] === "a") {
+      newArreglo.push(arrayOfStrings[i]);
+    }
+  }
+  return newArreglo;
 }
 
 module.exports = filter;
