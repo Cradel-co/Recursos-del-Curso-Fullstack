@@ -1,4 +1,4 @@
-![HenryLogo](../assets/logoBannerHenry.png)
+![HenryLogo](../assets/logoBannerCradel.png)
 
 # **HOMEWORK 01 | INSTALACIÓN DE HERRAMIENTAS**
 
@@ -26,15 +26,6 @@ Recuerda que si tu sistema operativo en **Linux** ya tienes GIT instalado por de
 
 ---
 
-</br >
-
-### **📍 SLACK**
-
-No es obligatorio que descargues este aplicación en tu computadora, pero te será más sencillo poder comunicarte con la comunidad.
-
-[**LINK DE DESCARGA**](https://slack.com/intl/es-ar/downloads/windows)
-
----
 
 </br >
 

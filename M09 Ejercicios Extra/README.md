@@ -1,4 +1,4 @@
-![HenryLogo](../Assets//logoBannerHenry.png)
+![HenryLogo](../Assets//logoBannerCradel.png)
 
 # **HOMEWORK 09 | EJERCICIOS EXTRA**
 
